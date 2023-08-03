@@ -12,6 +12,8 @@ cg = "coingecko_cli:app"
 [tool.poetry.dependencies]
 python = "^3.10"
 typer = { extras = ["all"], version = "^0.9.0" }
+requests = "^2.31.0"
+pydantic = "^2.1.1"
 
 
 [build-system]
