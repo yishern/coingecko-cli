@@ -10,6 +10,7 @@ from rich.panel import Panel
 from rich.table import Table
 from rich.text import Text
 
+from coingecko_cli.commands.sync import read_tokens_to_local_storage
 from coingecko_cli.utils.coingecko_utils import get_token_data
 
 console = Console()
@@ -163,3 +164,13 @@ def token_command(
             market_data=market_data,
         )
         terminal_print_token_data(token_data)
+
+def autocomplete_token(token_str: str):
+    tokens = read_tokens_to_local_storage()["tokens"]
+    completion = []
+    for token in tokens:
+        for v in token.values():
+            if v.lower().startswith(token_str):
+                completion.append((token['id'], f"{token['name']} <{token['symbol']}>"))
+                continue
+    return completion
