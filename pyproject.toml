@@ -1,0 +1,15 @@
+[tool.poetry]
+name = "coingecko-cli"
+version = "0.1.0"
+description = ""
+authors = ["yishern <44721502+yishern@users.noreply.github.com>"]
+readme = "README.md"
+packages = [{include = "coingecko_cli"}]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
