@@ -6,8 +6,12 @@ authors = ["yishern <44721502+yishern@users.noreply.github.com>"]
 readme = "README.md"
 packages = [{ include = "coingecko_cli" }]
 
+[tool.poetry.scripts]
+cg = "coingecko_cli:app"
+
 [tool.poetry.dependencies]
 python = "^3.10"
+typer = { extras = ["all"], version = "^0.9.0" }
 
 
 [build-system]

@@ -1,0 +1,1 @@
+from coingecko_cli.cli import app
