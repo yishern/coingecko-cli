@@ -27,7 +27,7 @@ def market(
 def token(
     token: Annotated[str, typer.Option("--token", "-t", autocompletion=autocomplete_token, help="bitcoin ethereum", show_default=False)],
     days: Annotated[int, typer.Option("--days", "-d", help="Data up to number of days ago (e.g. 1,14,30,max)")] = 30,
-    web: bool = False,
+    web: Annotated[Optional[bool], typer.Option("--web", "-w", help="Open in web browser")] = False,
 ):
     # trunk-ignore(ruff/D400)
     # trunk-ignore(ruff/D415)
