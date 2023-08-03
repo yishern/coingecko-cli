@@ -178,6 +178,22 @@ files = [
 ]
 
 [[package]]
+name = "plotext"
+version = "5.2.8"
+description = "plotext plots directly on terminal"
+optional = false
+python-versions = ">=3.5"
+files = [
+    {file = "plotext-5.2.8-py3-none-any.whl", hash = "sha256:7364cf72e6c9bffaf96158340fd2e0058faf404edbbc1e7a2aed421c8638d475"},
+    {file = "plotext-5.2.8.tar.gz", hash = "sha256:319a287baabeb8576a711995f973a2eba631c887aa6b0f33ab016f12c50ffebe"},
+]
+
+[package.extras]
+completion = ["shtab"]
+image = ["pillow (>=8.4)"]
+video = ["ffpyplayer (>=4.3.5)", "opencv-python (>=4.5.5)", "pafy (>=0.5.5)", "pillow (>=8.4)", "youtube-dl (==2020.12.2)"]
+
+[[package]]
 name = "pydantic"
 version = "2.1.1"
 description = "Data validation using Python type hints"
@@ -428,4 +444,4 @@ zstd = ["zstandard (>=0.18.0)"]
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.10"
-content-hash = "3e9c15547e8e5a257bf5802b2a61064160334f0c54947a2a2c70692e670812e4"
+content-hash = "4347e48bbd399162f040b05d458cc19ed0e9b5b381c9470ee6dc61a6b4dd8807"

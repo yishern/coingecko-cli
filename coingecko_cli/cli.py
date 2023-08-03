@@ -4,6 +4,7 @@ import typer
 from typing_extensions import Annotated
 
 from coingecko_cli.commands.market import market_command
+from coingecko_cli.commands.token import token_command
 
 app = typer.Typer(rich_markup_mode="rich")
 COMMAND_EPILOG = "Powered by [bold green]CoinGecko[/bold green] :heart:"
@@ -20,3 +21,15 @@ def market(
     """Cryptocurrency prices
     """
     market_command(web=web, page=page, per_page=per_page)
+
+@app.command(epilog=COMMAND_EPILOG)
+def token(
+    token: Annotated[str, typer.Option("--token", "-t", help="bitcoin ethereum", show_default=False)],
+    days: Annotated[int, typer.Option("--days", "-d", help="Data up to number of days ago (e.g. 1,14,30,max)")] = 30,
+    web: bool = False,
+):
+    # trunk-ignore(ruff/D400)
+    # trunk-ignore(ruff/D415)
+    """Token historical market data
+    """
+    token_command(web=web, token=token, days=days)
