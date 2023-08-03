@@ -14,9 +14,7 @@ Python 3.7 and above
 
 ## Usage
 
-<!-- trunk-ignore(markdownlint/MD001) -->
-
-#### Cryptocurrency prices
+### Cryptocurrency prices
 
 ```bash
   cg market
@@ -28,7 +26,7 @@ Python 3.7 and above
 | `--per-page` | `-pp` | `integer` | Total results per page [default: 100] |
 | `--web`      | `-w`  |           | Open in web browser                   |
 
-#### Token historical market data
+### Token historical market data
 
 ```bash
   cg token -t ethereum
@@ -46,13 +44,13 @@ OR (for autocompletion)
 | `--days`  | `-d`  | `integer` | Data up to number of days ago (e.g. 1,14,30,max) [default: 30] |
 | `--web`   | `-w`  |           | Open in web browser                                            |
 
-#### Sync (Cache tokens locally for `token` command autocompletion)
+### Sync (Cache tokens locally for `token` command autocompletion)
 
 ```bash
   cg sync
 ```
 
-#### Install completion for `token` command
+### Install completion for `token` command
 
 ```bash
   cg --install-completion
